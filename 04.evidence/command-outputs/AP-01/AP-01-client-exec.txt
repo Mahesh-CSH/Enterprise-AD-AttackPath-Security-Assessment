@@ -1,0 +1,5 @@
+SMB                      192.168.88.136  445    CLIENT           [*] Windows 10 / Server 2019 Build 19041 x64 (name:CLIENT) (domain:AD.lab) (signing:False) (SMBv1:None)
+SMB                      192.168.88.136  445    CLIENT           [+] AD.lab\user1:passuser@1 (Pwn3d!)
+SMB                      192.168.88.136  445    CLIENT           [-] WMIEXEC: Dcom initialization failed on connection with stringbinding: "ncacn_ip_tcp:192.168.88.136[51254]", please increase the timeout with the option "--dcom-timeout". If it's still failing maybe something is blocking the RPC connection, try another exec method
+SMB                      192.168.88.136  445    CLIENT           [-] TSCH SessionError: code: 0x8004131a - SCHED_E_MALFORMEDXML - The task XML is malformed.
+SMB                      192.168.88.136  445    CLIENT           [+] Executed command via atexec

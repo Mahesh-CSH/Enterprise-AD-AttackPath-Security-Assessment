@@ -1,0 +1,28 @@
+# extended LDIF
+#
+# LDAPv3
+# base <DC=AD,DC=lab> with scope subtree
+# filter: (&(objectClass=user)(sAMAccountName=mysql))
+# requesting: sAMAccountName memberOf 
+#
+
+# mysql, Users, AD.lab
+dn: CN=mysql,CN=Users,DC=AD,DC=lab
+sAMAccountName: mysql
+
+# search reference
+ref: ldap://ForestDnsZones.AD.lab/DC=ForestDnsZones,DC=AD,DC=lab
+
+# search reference
+ref: ldap://DomainDnsZones.AD.lab/DC=DomainDnsZones,DC=AD,DC=lab
+
+# search reference
+ref: ldap://AD.lab/CN=Configuration,DC=AD,DC=lab
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 5
+# numEntries: 1
+# numReferences: 3

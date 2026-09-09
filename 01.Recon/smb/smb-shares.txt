@@ -1,0 +1,11 @@
+SMB                      192.168.88.10   445    DC01             [*] Windows Server 2022 Build 20348 x64 (name:DC01) (domain:AD.lab) (signing:True) (SMBv1:None) (Null Auth:True)
+SMB                      192.168.88.10   445    DC01             [+] AD.lab\user1:passuser@1 
+SMB                      192.168.88.10   445    DC01             [*] Enumerated shares
+SMB                      192.168.88.10   445    DC01             Share           Permissions     Remark
+SMB                      192.168.88.10   445    DC01             -----           -----------     ------
+SMB                      192.168.88.10   445    DC01             ADMIN$                          Remote Admin
+SMB                      192.168.88.10   445    DC01             C$                              Default share
+SMB                      192.168.88.10   445    DC01             hacker          READ,WRITE      
+SMB                      192.168.88.10   445    DC01             IPC$            READ            Remote IPC
+SMB                      192.168.88.10   445    DC01             NETLOGON        READ            Logon server share 
+SMB                      192.168.88.10   445    DC01             SYSVOL          READ            Logon server share 

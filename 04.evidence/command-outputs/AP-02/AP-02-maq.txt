@@ -1,0 +1,4 @@
+LDAP                     192.168.88.10   389    DC01             [*] Windows Server 2022 Build 20348 (name:DC01) (domain:AD.lab) (signing:None) (channel binding:Never) 
+LDAP                     192.168.88.10   389    DC01             [+] AD.lab\user2:passuser@2 
+MAQ                      192.168.88.10   389    DC01             [*] Getting the MachineAccountQuota
+MAQ                      192.168.88.10   389    DC01             MachineAccountQuota: 10

@@ -1,0 +1,2 @@
+SMB                      192.168.88.10   445    DC01             [*] Windows Server 2022 Build 20348 x64 (name:DC01) (domain:AD.lab) (signing:True) (SMBv1:None) (Null Auth:True)
+SMB                      192.168.88.10   445    DC01             [+] AD.lab\mysql:password@123 

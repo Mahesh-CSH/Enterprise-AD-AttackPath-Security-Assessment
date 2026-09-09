@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.99 scan initiated Mon Sep  7 01:46:34 2026 as: /usr/lib/nmap/nmap -&#45;privileged -Pn -sC -sV -p- -oA dc01-full 192.168.88.10 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -&#45;privileged -Pn -sC -sV -p- -oA dc01-full 192.168.88.10" start="1788759994" startstr="Mon Sep  7 01:46:34 2026" version="7.99" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.88.10" addrtype="ipv4"/>
+<address addr="00:0C:29:54:FC:8A" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1788759995" endtime="1788760097"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.88.10" addrtype="ipv4"/>
+<address addr="00:0C:29:54:FC:8A" addrtype="mac" vendor="VMware"/>
+<hostnames>
+<hostname name="DC01.AD.lab" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65507">
+<extrareasons reason="reset" count="65507" proto="tcp" ports="1-52,54-87,89-134,136-138,140-388,390-444,446-463,465-592,594-635,637-3267,3270-5356,5358-5984,5986-9388,9390-47000,47002-49628,49630-49663,49669-60928,60931-60932,60934-60938,60940-60942,60944-60957,60959-60973,60975-65535"/>
+</extraports>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="domain" product="Simple DNS Plus" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:jh_software:simple_dns_plus</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="88"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="kerberos-sec" product="Microsoft Windows Kerberos" extrainfo="server time: 2026-09-07 05:47:11Z" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:kerberos</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: AD.lab, Site: Default-First-Site-Name" hostname="DC01" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-cert" output="Subject: commonName=DC01.AD.lab&#xa;Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:DC01.AD.lab&#xa;Not valid before: 2026-07-11T08:26:26&#xa;Not valid after:  2027-07-11T08:26:26"><table key="subject">
+<elem key="commonName">DC01.AD.lab</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">AD-DC01-CA</elem>
+<elem key="domainComponent">AD</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">FE7520D0B159A12897064FFD3F7985A857149837C4E432DDAB223FE2942F232FA11F5089D8F3A2396D345647121E42F4C61F03CA3CC36408BE7AC3E3E8F5D940C513D930A9FB1A6F117DD2D464E94398862FFABC04B08CE6AD81A9FC900A76E5EBA73B5B3A46DA04FD1EA31B5117BFB46307A88562B2F6948963B3FCD2354B2A46B4966DCD4117B567A1C026862D3B0E40287DF88FEE13FC78A07DC5FC66A0A0427C1454F83DAD18A72C98E98032C32A884F0D8DF7D493CE6071C677AE6991D907B9A502C10045B3B742F736676678DA4CE18164E5E3DE755A30636EBE790981B2F80BDAD85AA763777ACC5DCA4020D84A557101BE0054650CDAB6A2AE45A101</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">1.3.6.1.4.1.311.20.2</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Client Authentication, TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">S/MIME Capabilities</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">EF:62:20:28:90:F7:B8:40:0B:CE:DE:16:F6:5D:46:C5:BB:21:77:6F</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">1C:8C:D9:90:8E:F0:5C:2F:E5:DF:4D:78:17:9B:23:21:C8:4F:6F:73</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:ldap:///CN=AD-DC01-CA,CN=DC01,CN=CDP,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=AD,DC=lab?certificateRevocationList?base?objectClass=cRLDistributionPoint&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">CA Issuers - URI:ldap:///CN=AD-DC01-CA,CN=AIA,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=AD,DC=lab?cACertificate?base?objectClass=certificationAuthority</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:DC01.AD.lab</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2026-07-11T08:26:26</elem>
+<elem key="notAfter">2027-07-11T08:26:26</elem>
+</table>
+<elem key="md5">b4a6a890d859146a6a405865c77453fc</elem>
+<elem key="sha1">dadcfa0e753fa68e0caf1cf230e7c6d153216764</elem>
+<elem key="sha256">17038cf8555734438995644c1401d500d2eee01236230d19c39b74aebd5048f4</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFtzCCBJ+gAwIBAgITKwAAAAJ8JRQIiAnyYAAAAAAAAjANBgkqhkiG9w0BAQsF&#xa;ADA+MRMwEQYKCZImiZPyLGQBGRYDbGFiMRIwEAYKCZImiZPyLGQBGRYCQUQxEzAR&#xa;BgNVBAMTCkFELURDMDEtQ0EwHhcNMjYwNzExMDgyNjI2WhcNMjcwNzExMDgyNjI2&#xa;WjAWMRQwEgYDVQQDEwtEQzAxLkFELmxhYjCCASIwDQYJKoZIhvcNAQEBBQADggEP&#xa;ADCCAQoCggEBAP51INCxWaEolwZP/T95hahXFJg3xOQy3asiP+KULyMvoR9Qidjz&#xa;ojltNFZHEh5C9MYfA8o8w2QIvnrD4+j12UDFE9kwqfsabxF90tRk6UOYhi/6vASw&#xa;jOatgan8kAp25eunO1s6RtoE/R6jG1EXv7RjB6iFYrL2lIljs/zSNUsqRrSWbc1B&#xa;F7VnocAmhi07DkAoffiP7hP8eKB9xfxmoKBCfBRU+D2tGKcsmOmAMsMqiE8NjffU&#xa;k85gccZ3rmmR2Qe5pQLBAEWzt0L3NmdmeNpM4YFk5ePedVowY26+eQmBsvgL2tha&#xa;p2N3esxdykAg2EpVcQG+AFRlDNq2oq5FoQECAwEAAaOCAtQwggLQMC8GCSsGAQQB&#xa;gjcUAgQiHiAARABvAG0AYQBpAG4AQwBvAG4AdAByAG8AbABsAGUAcjAdBgNVHSUE&#xa;FjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwDgYDVR0PAQH/BAQDAgWgMHgGCSqGSIb3&#xa;DQEJDwRrMGkwDgYIKoZIhvcNAwICAgCAMA4GCCqGSIb3DQMEAgIAgDALBglghkgB&#xa;ZQMEASowCwYJYIZIAWUDBAEtMAsGCWCGSAFlAwQBAjALBglghkgBZQMEAQUwBwYF&#xa;Kw4DAgcwCgYIKoZIhvcNAwcwHQYDVR0OBBYEFO9iICiQ97hAC87eFvZdRsW7IXdv&#xa;MB8GA1UdIwQYMBaAFByM2ZCO8Fwv5d9NeBebIyHIT29zMIHABgNVHR8EgbgwgbUw&#xa;gbKgga+ggayGgalsZGFwOi8vL0NOPUFELURDMDEtQ0EsQ049REMwMSxDTj1DRFAs&#xa;Q049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmln&#xa;dXJhdGlvbixEQz1BRCxEQz1sYWI/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9i&#xa;YXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIG3BggrBgEFBQcB&#xa;AQSBqjCBpzCBpAYIKwYBBQUHMAKGgZdsZGFwOi8vL0NOPUFELURDMDEtQ0EsQ049&#xa;QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNv&#xa;bmZpZ3VyYXRpb24sREM9QUQsREM9bGFiP2NBQ2VydGlmaWNhdGU/YmFzZT9vYmpl&#xa;Y3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9yaXR5MDcGA1UdEQQwMC6gHwYJKwYB&#xa;BAGCNxkBoBIEELagytrUcENHpTYFaNr4RmiCC0RDMDEuQUQubGFiMA0GCSqGSIb3&#xa;DQEBCwUAA4IBAQATJ0s/W9JhEv3Mk6JsNGpQyWQZ8XyJtiPlfh+DrGY4Q9Ad9fDf&#xa;Y3YeH6+HcWrwZu2x9i9RQ2YFOx2kIr6CZUxyfPPZDRB9KGC4XePlAjnUJblkkGhO&#xa;/ezPmS1cV6cVMgLGvWweK3pRXpiDr8hdLnZtA5d7aMkA3WrRCZ+saabZV1dNJe01&#xa;yLjIcRQuufyM3tzHmYdd0+kWPjS+tmVj4v98mVtVI03KlgIybLhkXuCSLPVrMQY9&#xa;s8CXqzYZk3bvZWOqhKUX+12WuhlTjv6W50y+Uibp2AWIRLiWZxyWt+KhNNMoA9Zg&#xa;sR8vW/74pCf1QUVBb+Iq4Y0WNXLAyJkhkMgm&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="kpasswd5" method="table" conf="3"/></port>
+<port protocol="tcp" portid="593"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="636"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: AD.lab, Site: Default-First-Site-Name" hostname="DC01" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-cert" output="Subject: commonName=DC01.AD.lab&#xa;Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:DC01.AD.lab&#xa;Not valid before: 2026-07-11T08:26:26&#xa;Not valid after:  2027-07-11T08:26:26"><table key="subject">
+<elem key="commonName">DC01.AD.lab</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">AD-DC01-CA</elem>
+<elem key="domainComponent">AD</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">FE7520D0B159A12897064FFD3F7985A857149837C4E432DDAB223FE2942F232FA11F5089D8F3A2396D345647121E42F4C61F03CA3CC36408BE7AC3E3E8F5D940C513D930A9FB1A6F117DD2D464E94398862FFABC04B08CE6AD81A9FC900A76E5EBA73B5B3A46DA04FD1EA31B5117BFB46307A88562B2F6948963B3FCD2354B2A46B4966DCD4117B567A1C026862D3B0E40287DF88FEE13FC78A07DC5FC66A0A0427C1454F83DAD18A72C98E98032C32A884F0D8DF7D493CE6071C677AE6991D907B9A502C10045B3B742F736676678DA4CE18164E5E3DE755A30636EBE790981B2F80BDAD85AA763777ACC5DCA4020D84A557101BE0054650CDAB6A2AE45A101</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">1.3.6.1.4.1.311.20.2</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Client Authentication, TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">S/MIME Capabilities</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">EF:62:20:28:90:F7:B8:40:0B:CE:DE:16:F6:5D:46:C5:BB:21:77:6F</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">1C:8C:D9:90:8E:F0:5C:2F:E5:DF:4D:78:17:9B:23:21:C8:4F:6F:73</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:ldap:///CN=AD-DC01-CA,CN=DC01,CN=CDP,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=AD,DC=lab?certificateRevocationList?base?objectClass=cRLDistributionPoint&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">CA Issuers - URI:ldap:///CN=AD-DC01-CA,CN=AIA,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=AD,DC=lab?cACertificate?base?objectClass=certificationAuthority</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:DC01.AD.lab</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2026-07-11T08:26:26</elem>
+<elem key="notAfter">2027-07-11T08:26:26</elem>
+</table>
+<elem key="md5">b4a6a890d859146a6a405865c77453fc</elem>
+<elem key="sha1">dadcfa0e753fa68e0caf1cf230e7c6d153216764</elem>
+<elem key="sha256">17038cf8555734438995644c1401d500d2eee01236230d19c39b74aebd5048f4</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFtzCCBJ+gAwIBAgITKwAAAAJ8JRQIiAnyYAAAAAAAAjANBgkqhkiG9w0BAQsF&#xa;ADA+MRMwEQYKCZImiZPyLGQBGRYDbGFiMRIwEAYKCZImiZPyLGQBGRYCQUQxEzAR&#xa;BgNVBAMTCkFELURDMDEtQ0EwHhcNMjYwNzExMDgyNjI2WhcNMjcwNzExMDgyNjI2&#xa;WjAWMRQwEgYDVQQDEwtEQzAxLkFELmxhYjCCASIwDQYJKoZIhvcNAQEBBQADggEP&#xa;ADCCAQoCggEBAP51INCxWaEolwZP/T95hahXFJg3xOQy3asiP+KULyMvoR9Qidjz&#xa;ojltNFZHEh5C9MYfA8o8w2QIvnrD4+j12UDFE9kwqfsabxF90tRk6UOYhi/6vASw&#xa;jOatgan8kAp25eunO1s6RtoE/R6jG1EXv7RjB6iFYrL2lIljs/zSNUsqRrSWbc1B&#xa;F7VnocAmhi07DkAoffiP7hP8eKB9xfxmoKBCfBRU+D2tGKcsmOmAMsMqiE8NjffU&#xa;k85gccZ3rmmR2Qe5pQLBAEWzt0L3NmdmeNpM4YFk5ePedVowY26+eQmBsvgL2tha&#xa;p2N3esxdykAg2EpVcQG+AFRlDNq2oq5FoQECAwEAAaOCAtQwggLQMC8GCSsGAQQB&#xa;gjcUAgQiHiAARABvAG0AYQBpAG4AQwBvAG4AdAByAG8AbABsAGUAcjAdBgNVHSUE&#xa;FjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwDgYDVR0PAQH/BAQDAgWgMHgGCSqGSIb3&#xa;DQEJDwRrMGkwDgYIKoZIhvcNAwICAgCAMA4GCCqGSIb3DQMEAgIAgDALBglghkgB&#xa;ZQMEASowCwYJYIZIAWUDBAEtMAsGCWCGSAFlAwQBAjALBglghkgBZQMEAQUwBwYF&#xa;Kw4DAgcwCgYIKoZIhvcNAwcwHQYDVR0OBBYEFO9iICiQ97hAC87eFvZdRsW7IXdv&#xa;MB8GA1UdIwQYMBaAFByM2ZCO8Fwv5d9NeBebIyHIT29zMIHABgNVHR8EgbgwgbUw&#xa;gbKgga+ggayGgalsZGFwOi8vL0NOPUFELURDMDEtQ0EsQ049REMwMSxDTj1DRFAs&#xa;Q049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmln&#xa;dXJhdGlvbixEQz1BRCxEQz1sYWI/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9i&#xa;YXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIG3BggrBgEFBQcB&#xa;AQSBqjCBpzCBpAYIKwYBBQUHMAKGgZdsZGFwOi8vL0NOPUFELURDMDEtQ0EsQ049&#xa;QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNv&#xa;bmZpZ3VyYXRpb24sREM9QUQsREM9bGFiP2NBQ2VydGlmaWNhdGU/YmFzZT9vYmpl&#xa;Y3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9yaXR5MDcGA1UdEQQwMC6gHwYJKwYB&#xa;BAGCNxkBoBIEELagytrUcENHpTYFaNr4RmiCC0RDMDEuQUQubGFiMA0GCSqGSIb3&#xa;DQEBCwUAA4IBAQATJ0s/W9JhEv3Mk6JsNGpQyWQZ8XyJtiPlfh+DrGY4Q9Ad9fDf&#xa;Y3YeH6+HcWrwZu2x9i9RQ2YFOx2kIr6CZUxyfPPZDRB9KGC4XePlAjnUJblkkGhO&#xa;/ezPmS1cV6cVMgLGvWweK3pRXpiDr8hdLnZtA5d7aMkA3WrRCZ+saabZV1dNJe01&#xa;yLjIcRQuufyM3tzHmYdd0+kWPjS+tmVj4v98mVtVI03KlgIybLhkXuCSLPVrMQY9&#xa;s8CXqzYZk3bvZWOqhKUX+12WuhlTjv6W50y+Uibp2AWIRLiWZxyWt+KhNNMoA9Zg&#xa;sR8vW/74pCf1QUVBb+Iq4Y0WNXLAyJkhkMgm&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+<port protocol="tcp" portid="3268"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: AD.lab, Site: Default-First-Site-Name" hostname="DC01" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-cert" output="Subject: commonName=DC01.AD.lab&#xa;Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:DC01.AD.lab&#xa;Not valid before: 2026-07-11T08:26:26&#xa;Not valid after:  2027-07-11T08:26:26"><table key="subject">
+<elem key="commonName">DC01.AD.lab</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">AD-DC01-CA</elem>
+<elem key="domainComponent">AD</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">FE7520D0B159A12897064FFD3F7985A857149837C4E432DDAB223FE2942F232FA11F5089D8F3A2396D345647121E42F4C61F03CA3CC36408BE7AC3E3E8F5D940C513D930A9FB1A6F117DD2D464E94398862FFABC04B08CE6AD81A9FC900A76E5EBA73B5B3A46DA04FD1EA31B5117BFB46307A88562B2F6948963B3FCD2354B2A46B4966DCD4117B567A1C026862D3B0E40287DF88FEE13FC78A07DC5FC66A0A0427C1454F83DAD18A72C98E98032C32A884F0D8DF7D493CE6071C677AE6991D907B9A502C10045B3B742F736676678DA4CE18164E5E3DE755A30636EBE790981B2F80BDAD85AA763777ACC5DCA4020D84A557101BE0054650CDAB6A2AE45A101</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">1.3.6.1.4.1.311.20.2</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Client Authentication, TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">S/MIME Capabilities</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">EF:62:20:28:90:F7:B8:40:0B:CE:DE:16:F6:5D:46:C5:BB:21:77:6F</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">1C:8C:D9:90:8E:F0:5C:2F:E5:DF:4D:78:17:9B:23:21:C8:4F:6F:73</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:ldap:///CN=AD-DC01-CA,CN=DC01,CN=CDP,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=AD,DC=lab?certificateRevocationList?base?objectClass=cRLDistributionPoint&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">CA Issuers - URI:ldap:///CN=AD-DC01-CA,CN=AIA,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=AD,DC=lab?cACertificate?base?objectClass=certificationAuthority</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:DC01.AD.lab</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2026-07-11T08:26:26</elem>
+<elem key="notAfter">2027-07-11T08:26:26</elem>
+</table>
+<elem key="md5">b4a6a890d859146a6a405865c77453fc</elem>
+<elem key="sha1">dadcfa0e753fa68e0caf1cf230e7c6d153216764</elem>
+<elem key="sha256">17038cf8555734438995644c1401d500d2eee01236230d19c39b74aebd5048f4</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFtzCCBJ+gAwIBAgITKwAAAAJ8JRQIiAnyYAAAAAAAAjANBgkqhkiG9w0BAQsF&#xa;ADA+MRMwEQYKCZImiZPyLGQBGRYDbGFiMRIwEAYKCZImiZPyLGQBGRYCQUQxEzAR&#xa;BgNVBAMTCkFELURDMDEtQ0EwHhcNMjYwNzExMDgyNjI2WhcNMjcwNzExMDgyNjI2&#xa;WjAWMRQwEgYDVQQDEwtEQzAxLkFELmxhYjCCASIwDQYJKoZIhvcNAQEBBQADggEP&#xa;ADCCAQoCggEBAP51INCxWaEolwZP/T95hahXFJg3xOQy3asiP+KULyMvoR9Qidjz&#xa;ojltNFZHEh5C9MYfA8o8w2QIvnrD4+j12UDFE9kwqfsabxF90tRk6UOYhi/6vASw&#xa;jOatgan8kAp25eunO1s6RtoE/R6jG1EXv7RjB6iFYrL2lIljs/zSNUsqRrSWbc1B&#xa;F7VnocAmhi07DkAoffiP7hP8eKB9xfxmoKBCfBRU+D2tGKcsmOmAMsMqiE8NjffU&#xa;k85gccZ3rmmR2Qe5pQLBAEWzt0L3NmdmeNpM4YFk5ePedVowY26+eQmBsvgL2tha&#xa;p2N3esxdykAg2EpVcQG+AFRlDNq2oq5FoQECAwEAAaOCAtQwggLQMC8GCSsGAQQB&#xa;gjcUAgQiHiAARABvAG0AYQBpAG4AQwBvAG4AdAByAG8AbABsAGUAcjAdBgNVHSUE&#xa;FjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwDgYDVR0PAQH/BAQDAgWgMHgGCSqGSIb3&#xa;DQEJDwRrMGkwDgYIKoZIhvcNAwICAgCAMA4GCCqGSIb3DQMEAgIAgDALBglghkgB&#xa;ZQMEASowCwYJYIZIAWUDBAEtMAsGCWCGSAFlAwQBAjALBglghkgBZQMEAQUwBwYF&#xa;Kw4DAgcwCgYIKoZIhvcNAwcwHQYDVR0OBBYEFO9iICiQ97hAC87eFvZdRsW7IXdv&#xa;MB8GA1UdIwQYMBaAFByM2ZCO8Fwv5d9NeBebIyHIT29zMIHABgNVHR8EgbgwgbUw&#xa;gbKgga+ggayGgalsZGFwOi8vL0NOPUFELURDMDEtQ0EsQ049REMwMSxDTj1DRFAs&#xa;Q049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmln&#xa;dXJhdGlvbixEQz1BRCxEQz1sYWI/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9i&#xa;YXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIG3BggrBgEFBQcB&#xa;AQSBqjCBpzCBpAYIKwYBBQUHMAKGgZdsZGFwOi8vL0NOPUFELURDMDEtQ0EsQ049&#xa;QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNv&#xa;bmZpZ3VyYXRpb24sREM9QUQsREM9bGFiP2NBQ2VydGlmaWNhdGU/YmFzZT9vYmpl&#xa;Y3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9yaXR5MDcGA1UdEQQwMC6gHwYJKwYB&#xa;BAGCNxkBoBIEELagytrUcENHpTYFaNr4RmiCC0RDMDEuQUQubGFiMA0GCSqGSIb3&#xa;DQEBCwUAA4IBAQATJ0s/W9JhEv3Mk6JsNGpQyWQZ8XyJtiPlfh+DrGY4Q9Ad9fDf&#xa;Y3YeH6+HcWrwZu2x9i9RQ2YFOx2kIr6CZUxyfPPZDRB9KGC4XePlAjnUJblkkGhO&#xa;/ezPmS1cV6cVMgLGvWweK3pRXpiDr8hdLnZtA5d7aMkA3WrRCZ+saabZV1dNJe01&#xa;yLjIcRQuufyM3tzHmYdd0+kWPjS+tmVj4v98mVtVI03KlgIybLhkXuCSLPVrMQY9&#xa;s8CXqzYZk3bvZWOqhKUX+12WuhlTjv6W50y+Uibp2AWIRLiWZxyWt+KhNNMoA9Zg&#xa;sR8vW/74pCf1QUVBb+Iq4Y0WNXLAyJkhkMgm&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="3269"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ldap" product="Microsoft Windows Active Directory LDAP" extrainfo="Domain: AD.lab, Site: Default-First-Site-Name" hostname="DC01" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-cert" output="Subject: commonName=DC01.AD.lab&#xa;Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:DC01.AD.lab&#xa;Not valid before: 2026-07-11T08:26:26&#xa;Not valid after:  2027-07-11T08:26:26"><table key="subject">
+<elem key="commonName">DC01.AD.lab</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">AD-DC01-CA</elem>
+<elem key="domainComponent">AD</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">FE7520D0B159A12897064FFD3F7985A857149837C4E432DDAB223FE2942F232FA11F5089D8F3A2396D345647121E42F4C61F03CA3CC36408BE7AC3E3E8F5D940C513D930A9FB1A6F117DD2D464E94398862FFABC04B08CE6AD81A9FC900A76E5EBA73B5B3A46DA04FD1EA31B5117BFB46307A88562B2F6948963B3FCD2354B2A46B4966DCD4117B567A1C026862D3B0E40287DF88FEE13FC78A07DC5FC66A0A0427C1454F83DAD18A72C98E98032C32A884F0D8DF7D493CE6071C677AE6991D907B9A502C10045B3B742F736676678DA4CE18164E5E3DE755A30636EBE790981B2F80BDAD85AA763777ACC5DCA4020D84A557101BE0054650CDAB6A2AE45A101</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">1.3.6.1.4.1.311.20.2</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Client Authentication, TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">S/MIME Capabilities</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">EF:62:20:28:90:F7:B8:40:0B:CE:DE:16:F6:5D:46:C5:BB:21:77:6F</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">1C:8C:D9:90:8E:F0:5C:2F:E5:DF:4D:78:17:9B:23:21:C8:4F:6F:73</elem>
+</table>
+<table>
+<elem key="name">X509v3 CRL Distribution Points</elem>
+<elem key="value">Full Name:&#xa;  URI:ldap:///CN=AD-DC01-CA,CN=DC01,CN=CDP,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=AD,DC=lab?certificateRevocationList?base?objectClass=cRLDistributionPoint&#xa;</elem>
+</table>
+<table>
+<elem key="name">Authority Information Access</elem>
+<elem key="value">CA Issuers - URI:ldap:///CN=AD-DC01-CA,CN=AIA,CN=Public%20Key%20Services,CN=Services,CN=Configuration,DC=AD,DC=lab?cACertificate?base?objectClass=certificationAuthority</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">othername: 1.3.6.1.4.1.311.25.1:&lt;unsupported&gt;, DNS:DC01.AD.lab</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2026-07-11T08:26:26</elem>
+<elem key="notAfter">2027-07-11T08:26:26</elem>
+</table>
+<elem key="md5">b4a6a890d859146a6a405865c77453fc</elem>
+<elem key="sha1">dadcfa0e753fa68e0caf1cf230e7c6d153216764</elem>
+<elem key="sha256">17038cf8555734438995644c1401d500d2eee01236230d19c39b74aebd5048f4</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFtzCCBJ+gAwIBAgITKwAAAAJ8JRQIiAnyYAAAAAAAAjANBgkqhkiG9w0BAQsF&#xa;ADA+MRMwEQYKCZImiZPyLGQBGRYDbGFiMRIwEAYKCZImiZPyLGQBGRYCQUQxEzAR&#xa;BgNVBAMTCkFELURDMDEtQ0EwHhcNMjYwNzExMDgyNjI2WhcNMjcwNzExMDgyNjI2&#xa;WjAWMRQwEgYDVQQDEwtEQzAxLkFELmxhYjCCASIwDQYJKoZIhvcNAQEBBQADggEP&#xa;ADCCAQoCggEBAP51INCxWaEolwZP/T95hahXFJg3xOQy3asiP+KULyMvoR9Qidjz&#xa;ojltNFZHEh5C9MYfA8o8w2QIvnrD4+j12UDFE9kwqfsabxF90tRk6UOYhi/6vASw&#xa;jOatgan8kAp25eunO1s6RtoE/R6jG1EXv7RjB6iFYrL2lIljs/zSNUsqRrSWbc1B&#xa;F7VnocAmhi07DkAoffiP7hP8eKB9xfxmoKBCfBRU+D2tGKcsmOmAMsMqiE8NjffU&#xa;k85gccZ3rmmR2Qe5pQLBAEWzt0L3NmdmeNpM4YFk5ePedVowY26+eQmBsvgL2tha&#xa;p2N3esxdykAg2EpVcQG+AFRlDNq2oq5FoQECAwEAAaOCAtQwggLQMC8GCSsGAQQB&#xa;gjcUAgQiHiAARABvAG0AYQBpAG4AQwBvAG4AdAByAG8AbABsAGUAcjAdBgNVHSUE&#xa;FjAUBggrBgEFBQcDAgYIKwYBBQUHAwEwDgYDVR0PAQH/BAQDAgWgMHgGCSqGSIb3&#xa;DQEJDwRrMGkwDgYIKoZIhvcNAwICAgCAMA4GCCqGSIb3DQMEAgIAgDALBglghkgB&#xa;ZQMEASowCwYJYIZIAWUDBAEtMAsGCWCGSAFlAwQBAjALBglghkgBZQMEAQUwBwYF&#xa;Kw4DAgcwCgYIKoZIhvcNAwcwHQYDVR0OBBYEFO9iICiQ97hAC87eFvZdRsW7IXdv&#xa;MB8GA1UdIwQYMBaAFByM2ZCO8Fwv5d9NeBebIyHIT29zMIHABgNVHR8EgbgwgbUw&#xa;gbKgga+ggayGgalsZGFwOi8vL0NOPUFELURDMDEtQ0EsQ049REMwMSxDTj1DRFAs&#xa;Q049UHVibGljJTIwS2V5JTIwU2VydmljZXMsQ049U2VydmljZXMsQ049Q29uZmln&#xa;dXJhdGlvbixEQz1BRCxEQz1sYWI/Y2VydGlmaWNhdGVSZXZvY2F0aW9uTGlzdD9i&#xa;YXNlP29iamVjdENsYXNzPWNSTERpc3RyaWJ1dGlvblBvaW50MIG3BggrBgEFBQcB&#xa;AQSBqjCBpzCBpAYIKwYBBQUHMAKGgZdsZGFwOi8vL0NOPUFELURDMDEtQ0EsQ049&#xa;QUlBLENOPVB1YmxpYyUyMEtleSUyMFNlcnZpY2VzLENOPVNlcnZpY2VzLENOPUNv&#xa;bmZpZ3VyYXRpb24sREM9QUQsREM9bGFiP2NBQ2VydGlmaWNhdGU/YmFzZT9vYmpl&#xa;Y3RDbGFzcz1jZXJ0aWZpY2F0aW9uQXV0aG9yaXR5MDcGA1UdEQQwMC6gHwYJKwYB&#xa;BAGCNxkBoBIEELagytrUcENHpTYFaNr4RmiCC0RDMDEuQUQubGFiMA0GCSqGSIb3&#xa;DQEBCwUAA4IBAQATJ0s/W9JhEv3Mk6JsNGpQyWQZ8XyJtiPlfh+DrGY4Q9Ad9fDf&#xa;Y3YeH6+HcWrwZu2x9i9RQ2YFOx2kIr6CZUxyfPPZDRB9KGC4XePlAjnUJblkkGhO&#xa;/ezPmS1cV6cVMgLGvWweK3pRXpiDr8hdLnZtA5d7aMkA3WrRCZ+saabZV1dNJe01&#xa;yLjIcRQuufyM3tzHmYdd0+kWPjS+tmVj4v98mVtVI03KlgIybLhkXuCSLPVrMQY9&#xa;s8CXqzYZk3bvZWOqhKUX+12WuhlTjv6W50y+Uibp2AWIRLiWZxyWt+KhNNMoA9Zg&#xa;sR8vW/74pCf1QUVBb+Iq4Y0WNXLAyJkhkMgm&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="5357"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Service Unavailable"><elem key="title">Service Unavailable</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script></port>
+<port protocol="tcp" portid="9389"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="49629"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49667"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="60929"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ncacn_http" product="Microsoft Windows RPC over HTTP" version="1.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="60930"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="60933"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="60939"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="60943"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="60958"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="60974"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: DC01, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:0c:29:54:fc:8a (VMware)"/><script id="smb2-time" output="&#xa;  date: 2026-09-07T05:48:05&#xa;  start_date: N/A"><elem key="date">2026-09-07T05:48:05</elem>
+<elem key="start_date">N/A</elem>
+</script><script id="smb2-security-mode" output="&#xa;  3.1.1: &#xa;    Message signing enabled and required"><table key="3.1.1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script></hostscript><times srtt="307" rttvar="77" to="100000"/>
+</host>
+<runstats><finished time="1788760097" timestr="Mon Sep  7 01:48:17 2026" summary="Nmap done at Mon Sep  7 01:48:17 2026; 1 IP address (1 host up) scanned in 102.65 seconds" elapsed="102.65" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

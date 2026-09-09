@@ -1,0 +1,23 @@
+# extended LDIF
+#
+# LDAPv3
+# base <DC=AD,DC=lab> with scope subtree
+# filter: (&(objectClass=group)(member=CN=mysql,CN=Users,DC=AD,DC=lab))
+# requesting: cn distinguishedName 
+#
+
+# search reference
+ref: ldap://ForestDnsZones.AD.lab/DC=ForestDnsZones,DC=AD,DC=lab
+
+# search reference
+ref: ldap://DomainDnsZones.AD.lab/DC=DomainDnsZones,DC=AD,DC=lab
+
+# search reference
+ref: ldap://AD.lab/CN=Configuration,DC=AD,DC=lab
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 4
+# numReferences: 3

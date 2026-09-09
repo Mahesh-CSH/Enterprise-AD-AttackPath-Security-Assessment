@@ -1,0 +1,7 @@
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+[-] User user1 doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User user2 doesn't have UF_DONT_REQUIRE_PREAUTH set
+[-] User mysql doesn't have UF_DONT_REQUIRE_PREAUTH set
+$krb5asrep$23$asrep@AD.LAB:298ee0b40f8398b335d08ec1f9e0d208$379562b9f333217af6a9b4a7550bb9c02861ed0213be3d42a803ba382b94d65d15887313c8a92bd17faa87abf75b27faa85fe379e4293a6107ed25c37baa6142108688c69345d97947b529f5bb8b055bb685659c80f1eb27446538435fdf998514a7934ce64a038b4c0dccfa3aed09dcab2f88278f2cd1e7ef7c8b4d178b669483afc9d1806e231e6c9b8b3071234b3ac0a46a0bd4c95e79ba9579de346eab196d2a3a51262ca5c3ad2733bb64ca6effdf489ddc302de7ba2f9f8e73883cc59bb5b18df14ddfbf9f4eb63e12a67d8cc14a6cbd48996d2af0b1cfb4a5bb02d409
+[-] User localadmin doesn't have UF_DONT_REQUIRE_PREAUTH set

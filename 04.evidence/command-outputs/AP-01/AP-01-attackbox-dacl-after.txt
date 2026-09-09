@@ -1,0 +1,56 @@
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Parsing DACL
+[*] Printing parsed DACL
+[*] Filtering results for SID (S-1-5-21-3684399610-1567198011-392383768-1107)
+[*]   ACE[0] info                
+[*]     ACE Type                  : ACCESS_ALLOWED_OBJECT_ACE
+[*]     ACE flags                 : None
+[*]     Access mask               : WriteProperty (0x20)
+[*]     Flags                     : ACE_OBJECT_TYPE_PRESENT, ACE_INHERITED_OBJECT_TYPE_PRESENT
+[*]     Object type (GUID)        : User-Logon (5f202010-79a5-11d0-9020-00c04fc2d4cf)
+[*]     Inherited type (GUID)     : Computer (bf967a86-0de6-11d0-a285-00aa003049e2)
+[*]     Trustee (SID)             : user1 (S-1-5-21-3684399610-1567198011-392383768-1107)
+[*]   ACE[1] info                
+[*]     ACE Type                  : ACCESS_ALLOWED_OBJECT_ACE
+[*]     ACE flags                 : None
+[*]     Access mask               : WriteProperty (0x20)
+[*]     Flags                     : ACE_OBJECT_TYPE_PRESENT, ACE_INHERITED_OBJECT_TYPE_PRESENT
+[*]     Object type (GUID)        : Description (bf967950-0de6-11d0-a285-00aa003049e2)
+[*]     Inherited type (GUID)     : Computer (bf967a86-0de6-11d0-a285-00aa003049e2)
+[*]     Trustee (SID)             : user1 (S-1-5-21-3684399610-1567198011-392383768-1107)
+[*]   ACE[2] info                
+[*]     ACE Type                  : ACCESS_ALLOWED_OBJECT_ACE
+[*]     ACE flags                 : None
+[*]     Access mask               : WriteProperty (0x20)
+[*]     Flags                     : ACE_OBJECT_TYPE_PRESENT, ACE_INHERITED_OBJECT_TYPE_PRESENT
+[*]     Object type (GUID)        : Display-Name (bf967953-0de6-11d0-a285-00aa003049e2)
+[*]     Inherited type (GUID)     : Computer (bf967a86-0de6-11d0-a285-00aa003049e2)
+[*]     Trustee (SID)             : user1 (S-1-5-21-3684399610-1567198011-392383768-1107)
+[*]   ACE[3] info                
+[*]     ACE Type                  : ACCESS_ALLOWED_OBJECT_ACE
+[*]     ACE flags                 : None
+[*]     Access mask               : WriteProperty (0x20)
+[*]     Flags                     : ACE_OBJECT_TYPE_PRESENT, ACE_INHERITED_OBJECT_TYPE_PRESENT
+[*]     Object type (GUID)        : SAM-Account-Name (3e0abfd0-126a-11d0-a060-00aa006c33ed)
+[*]     Inherited type (GUID)     : Computer (bf967a86-0de6-11d0-a285-00aa003049e2)
+[*]     Trustee (SID)             : user1 (S-1-5-21-3684399610-1567198011-392383768-1107)
+[*]   ACE[4] info                
+[*]     ACE Type                  : ACCESS_ALLOWED_OBJECT_ACE
+[*]     ACE flags                 : None
+[*]     Access mask               : Self (0x8)
+[*]     Flags                     : ACE_OBJECT_TYPE_PRESENT
+[*]     Object type (GUID)        : Validated-DNS-Host-Name (72e39547-7b18-11d1-adef-00c04fd8d5cd)
+[*]     Trustee (SID)             : user1 (S-1-5-21-3684399610-1567198011-392383768-1107)
+[*]   ACE[5] info                
+[*]     ACE Type                  : ACCESS_ALLOWED_OBJECT_ACE
+[*]     ACE flags                 : None
+[*]     Access mask               : Self (0x8)
+[*]     Flags                     : ACE_OBJECT_TYPE_PRESENT
+[*]     Object type (GUID)        : Validated-SPN (f3a64788-5306-11d1-a9c5-0000f80367c1)
+[*]     Trustee (SID)             : user1 (S-1-5-21-3684399610-1567198011-392383768-1107)
+[*]   ACE[13] info                
+[*]     ACE Type                  : ACCESS_ALLOWED_ACE
+[*]     ACE flags                 : None
+[*]     Access mask               : Read, AllExtendedRights (0x20194)
+[*]     Trustee (SID)             : user1 (S-1-5-21-3684399610-1567198011-392383768-1107)

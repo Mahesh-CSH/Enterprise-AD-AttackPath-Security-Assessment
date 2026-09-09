@@ -1,0 +1,73 @@
+# Nmap 7.99 scan initiated Mon Sep  7 01:46:34 2026 as: /usr/lib/nmap/nmap --privileged -Pn -sC -sV -p- -oA dc01-full 192.168.88.10
+Nmap scan report for DC01.AD.lab (192.168.88.10)
+Host is up (0.00031s latency).
+Not shown: 65507 closed tcp ports (reset)
+PORT      STATE SERVICE       VERSION
+53/tcp    open  domain        Simple DNS Plus
+88/tcp    open  kerberos-sec  Microsoft Windows Kerberos (server time: 2026-09-07 05:47:11Z)
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp   open  ldap          Microsoft Windows Active Directory LDAP (Domain: AD.lab, Site: Default-First-Site-Name)
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=DC01.AD.lab
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.AD.lab
+| Not valid before: 2026-07-11T08:26:26
+|_Not valid after:  2027-07-11T08:26:26
+445/tcp   open  microsoft-ds?
+464/tcp   open  kpasswd5?
+593/tcp   open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: AD.lab, Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=DC01.AD.lab
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.AD.lab
+| Not valid before: 2026-07-11T08:26:26
+|_Not valid after:  2027-07-11T08:26:26
+|_ssl-date: TLS randomness does not represent time
+3268/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: AD.lab, Site: Default-First-Site-Name)
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=DC01.AD.lab
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.AD.lab
+| Not valid before: 2026-07-11T08:26:26
+|_Not valid after:  2027-07-11T08:26:26
+3269/tcp  open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: AD.lab, Site: Default-First-Site-Name)
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=DC01.AD.lab
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1:<unsupported>, DNS:DC01.AD.lab
+| Not valid before: 2026-07-11T08:26:26
+|_Not valid after:  2027-07-11T08:26:26
+5357/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+9389/tcp  open  mc-nmf        .NET Message Framing
+47001/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49629/tcp open  msrpc         Microsoft Windows RPC
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  msrpc         Microsoft Windows RPC
+49666/tcp open  msrpc         Microsoft Windows RPC
+49667/tcp open  msrpc         Microsoft Windows RPC
+49668/tcp open  msrpc         Microsoft Windows RPC
+60929/tcp open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+60930/tcp open  msrpc         Microsoft Windows RPC
+60933/tcp open  msrpc         Microsoft Windows RPC
+60939/tcp open  msrpc         Microsoft Windows RPC
+60943/tcp open  msrpc         Microsoft Windows RPC
+60958/tcp open  msrpc         Microsoft Windows RPC
+60974/tcp open  msrpc         Microsoft Windows RPC
+MAC Address: 00:0C:29:54:FC:8A (VMware)
+Service Info: Host: DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_nbstat: NetBIOS name: DC01, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:54:fc:8a (VMware)
+| smb2-time: 
+|   date: 2026-09-07T05:48:05
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled and required
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep  7 01:48:17 2026 -- 1 IP address (1 host up) scanned in 102.65 seconds

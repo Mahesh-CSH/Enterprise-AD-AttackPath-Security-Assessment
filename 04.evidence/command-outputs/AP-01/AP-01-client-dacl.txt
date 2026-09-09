@@ -1,0 +1,10 @@
+Impacket v0.14.0.dev0 - Copyright Fortra, LLC and its affiliated companies 
+
+[*] Parsing DACL
+[*] Printing parsed DACL
+[*] Filtering results for SID (S-1-5-21-3684399610-1567198011-392383768-1107)
+[*]   ACE[8] info                
+[*]     ACE Type                  : ACCESS_ALLOWED_ACE
+[*]     ACE flags                 : CONTAINER_INHERIT_ACE
+[*]     Access mask               : FullControl (0xf01ff)
+[*]     Trustee (SID)             : user1 (S-1-5-21-3684399610-1567198011-392383768-1107)
