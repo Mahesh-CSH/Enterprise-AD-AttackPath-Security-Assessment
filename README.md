@@ -1,112 +1,190 @@
-# Enterprise Active Directory Attack-Path & Purple-Team Security Assessment
+# 🔐 Enterprise Active Directory Attack-Path & Security Assessment
 
-## Overview
+### Attack-Path Discovery • Controlled Exploitation • Remediation • Retesting
 
-An authorized security assessment of a Windows Active Directory environment focused on attack-path discovery, privilege escalation, delegation abuse, credential exposure, remediation, detection and retesting.
+> A hands-on Active Directory security assessment focused on identifying, validating, and remediating realistic privilege-escalation and credential-exposure attack paths in an enterprise-style Windows domain environment.
 
-## Environment
+<p align="center">
 
-- Domain: AD.lab
-- Domain Controller: DC01
-- Windows Server 2022
-- Windows 10 domain-joined client
-- Kali Linux assessment workstation
-- BloodHound Community Edition
-- Impacket
-- NetExec
-- Nmap
-- Hashcat
+![Active Directory](https://img.shields.io/badge/Active%20Directory-Security%20Assessment-0078D4?style=for-the-badge&logo=microsoft)
+![BloodHound](https://img.shields.io/badge/BloodHound-Attack%20Path%20Analysis-red?style=for-the-badge)
+![Kali Linux](https://img.shields.io/badge/Kali%20Linux-Penetration%20Testing-557C94?style=for-the-badge&logo=kalilinux)
+![Windows Server](https://img.shields.io/badge/Windows%20Server-2022-0078D4?style=for-the-badge&logo=windows)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-## Assessment Methodology
+</p>
 
-1. Network reconnaissance
-2. SMB/LDAP enumeration
-3. Active Directory enumeration
-4. BloodHound attack-path analysis
-5. ACL analysis
-6. Delegation assessment
-7. Kerberos attack assessment
-8. Attack-path validation
-9. Detection analysis
-10. Remediation
-11. Retesting
-12. Final risk assessment
+---
 
-## Key Findings
+## 🎯 Project Overview
 
-### AP-01 — RBCD / Excessive Active Directory ACL
+This project simulates an **enterprise Active Directory security assessment** from initial reconnaissance through final remediation validation.
 
-USER1 possessed excessive control over an AD computer object, enabling an attack path involving resource-based constrained delegation.
+Rather than focusing only on individual vulnerabilities, the assessment analyzes how **Active Directory permissions, delegation, computer-account controls, Kerberos authentication, and privilege relationships can be chained together to create practical attack paths**.
 
-Impact:
-- Computer-account manipulation
-- Kerberos delegation abuse
-- Privileged remote execution on CLIENT
+### Assessment Lifecycle
 
+┌──────────────┐
+│Reconnaissance│
+└──────┬───────┘
+       ↓
+┌──────────────────┐
+│ AD Enumeration   │
+└──────┬───────────┘
+       ↓
+┌──────────────────────┐
+│ Attack-Path Analysis │
+└──────┬───────────────┘
+       ↓
+┌──────────────────────┐
+│ Controlled Validation│
+└──────┬───────────────┘
+       ↓
+┌──────────────────────┐
+│ Remediation          │
+└──────┬───────────────┘
+       ↓
+┌──────────────────────┐
+│ Retesting            │
+└──────┬───────────────┘
+       ↓
+┌──────────────────────┐
+│ Final Validation     │
+└──────────────────────┘
+
+🏆 Key Results
+   Assessment Area	Result
+🔴 AP-01 — ACL + RBCD Attack Path	Successfully demonstrated
+🟠 AP-02 — Kerberoasting	Credential recovery demonstrated
+🟡 AP-03 — AS-REP Roasting	Exposure identified; credential not recovered
+🔎 BloodHound Attack-Path Analysis	Completed
+🛠️ Remediation	Performed
+🔁 Post-Remediation Retesting	Completed
+
+
+Final Validation
+
+AP-01: The original USER1 → CLIENT attack path was removed and validated through fresh Active Directory enumeration and BloodHound analysis.
+
+AP-02: Excessive MYSQL privileges were reduced and no MYSQL → Domain Admin path was identified. Credential rotation remains a recommended follow-up because the assessment credential was recovered.
+
+AP-03: AS-REP Roasting exposure was identified, but the credential was not recovered and no ASREP → Domain Admin path was demonstrated.
+
+
+🔥 What This Project Demonstrates
+
+1.Active Directory reconnaissance and enumeration
+2.BloodHound attack-path analysis
+3.AD ACL and delegated-permission analysis
+4.Resource-Based Constrained Delegation (RBCD)
+5.Machine Account Quota assessment
+6.Kerberoasting
+7.AS-REP Roasting
+8.Kerberos ticket analysis
+9.Privilege and group-membership review
+10.Controlled remote execution validation
+11.Security remediation
+12.Post-remediation retesting
+13.Evidence-driven security reporting
+
+
+🛠️ Primary Toolset
+
+Kali Linux
+  ├── Nmap
+  ├── NetExec
+  ├── Impacket
+  │   ├── dacledit
+  │   ├── rbcd
+  │   ├── getST
+  │   ├── GetUserSPNs
+  │   └── GetNPUsers
+  ├── BloodHound
+  ├── Hashcat
+  └── LDAP / SMB tooling
+
+
+🏗️ Lab Environment
+                    ┌──────────────────────┐
+                    │     AD.lab Domain    │
+                    └──────────┬───────────┘
+                               │
+                       ┌───────▼───────┐
+                       │      DC01     │
+                       │ Windows Server│
+                       │ Domain Control│
+                       └───────┬───────┘
+                               │
+                    ┌──────────┴──────────┐
+                    │                     │
+             ┌──────▼──────┐       ┌──────▼──────┐
+             │   CLIENT    │       │  ATTACKBOX  │
+             │ Windows 10  │       │ Domain Host │
+             └─────────────┘       └─────────────┘
+
+Environment: Controlled lab network
+Domain: AD.lab
+
+All testing was performed against an authorized laboratory environment. Sensitive credentials, hashes, Kerberos tickets, password lists, and other secret material are excluded from the public repository.
+
+🔥 Featured Attack Paths
+
+AP-01 — Excessive ACL Permissions + RBCD
 Severity: High
 
-### AP-02 — Kerberoastable Service Account
+A low-privileged domain user was found with excessive control over the CLIENT computer object.
+The assessment demonstrated how excessive AD permissions could be chained with computer-account and RBCD techniques to achieve privileged remote execution.
+Result: ✅ Remediated and retested
 
-The MYSQL account possessed a service principal name and was vulnerable to Kerberoasting.
+AP-02 — Kerberoastable Service Account
+Severity: Medium
 
-Impact:
-- TGS credential exposure
-- Offline password cracking
-- Potential credential compromise
+The MYSQL service account possessed an SPN and was successfully assessed through Kerberoasting.
+The resulting Kerberos service-ticket material was subjected to offline password cracking and the credential was recovered.
+Excessive group membership was subsequently removed.
+Result: 🟡 Privilege exposure reduced; credential rotation recommended
 
-Severity: Medium/High
+AP-03 — AS-REP Roasting & Delegation
+Severity: Informational / Low
 
-### AP-03 — Delegation Review
+An AS-REP roastable account was identified and assessed.
+The authentication material was subjected to offline password cracking, but the credential was not recovered.
+No demonstrated path from the account to Domain Admin was identified.
+Result: ✅ Assessment completed
 
-Delegation configuration was assessed. The domain controller's unconstrained delegation configuration was identified and treated as an architectural condition rather than an independent finding.
 
-### AP-04 — Domain Admin Membership Review
+📊 Project Structure
 
-LOCALADMIN was identified as a member of Domain Admins.
+Enterprise-AD-attackpath-project/
+  │
+  ├── 01.Recon/
+  ├── 02.ad-enumeration/
+  ├── 03.attack-path/
+  ├── 04.evidence/
+  ├── 05.detection/
+  ├── 06.remediation/
+  ├── 07.retest/
+  ├── 08.report/
+  ├── README.md
+  └── .gitignore
 
-This requires administrative review to determine whether the privilege assignment is intentional.
+  
+🔬 Assessment Philosophy
 
-## Purple-Team Validation
+The project follows an evidence-driven approach:
+Identify → Validate → Demonstrate Impact → Remediate → Retest
+A theoretical relationship was not automatically treated as a successful compromise. Attack paths were validated where practical, unsuccessful credential-recovery attempts were documented as unsuccessful, and remediation was followed by fresh validation.
 
-Attack paths were validated using:
 
-- BloodHound
-- LDAP ACL inspection
-- NetExec
-- Impacket
-- Kerberos S4U
-- RBCD validation
-- Remote execution testing
+📸 Evidence
 
-## Remediation
+Selected sanitized screenshots and command-output evidence are available under:
+|-->04.evidence/
+The repository intentionally excludes sensitive credential material.
 
-- Removed excessive USER1 control from CLIENT
-- Removed temporary AP01 computer account
-- Removed temporary AP01 RBCD relationship
-- Retested Active Directory permissions
-- Re-collected BloodHound data
-- Compared BEFORE and AFTER attack paths
 
-## Retesting
+⚠️ Disclaimer
 
-The direct USER1 → CLIENT GenericAll relationship was no longer present after remediation.
+This project was conducted entirely within a controlled and authorized laboratory environment for cybersecurity learning and professional portfolio development.
+No unauthorized systems were targeted.
 
-An alternate delegation path involving ATTACKBOX remained and was documented separately.
-
-## Detection Opportunities
-
-Relevant telemetry includes:
-
-- Windows Security Event Logs
-- Directory Service changes
-- Computer-account creation
-- Changes to msDS-AllowedToActOnBehalfOfOtherIdentity
-- Kerberos service-ticket activity
-- Privileged logon events
-- Remote service execution
-
-## Conclusion
-
-The assessment demonstrated how excessive Active Directory permissions and delegation relationships can combine to create practical attack paths.
-
-The assessment followed an attack → validate → remediate → retest methodology rather than relying solely on vulnerability enumeration.
