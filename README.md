@@ -53,7 +53,7 @@ Final Validation
 
 
 ##🔥 AP-01 — Excessive ACL Permissions + RBCD
-High
+**Severity:** High
 
 A low-privileged domain user was identified with excessive control over the CLIENT computer object.
 
@@ -83,14 +83,14 @@ Removed temporary RBCD configuration.
 Revalidated Active Directory permissions.
 Performed fresh BloodHound collection.
 
-# Retest
+## Retest
 
 The original USER1 → CLIENT attack path was no longer identified after remediation.
 
 Result: ✅ PASS — Remediated and Validated
 
 ### 🔑 AP-02 — Kerberoastable Service Account
-# Medium
+**Severity:** Medium
 
 The MYSQL service account was identified with a registered Service Principal Name (SPN):
 ```text
@@ -100,7 +100,7 @@ The account was successfully assessed for Kerberoasting.
 
 A Kerberos service ticket was obtained and subjected to offline password-cracking analysis. Credential recovery was successfully demonstrated.
 
-## Privilege Assessment
+### Privilege Assessment
 
 The account was subsequently assessed for privilege relationships.
 ```text
@@ -111,13 +111,13 @@ MYSQL
 ```
 No demonstrated MYSQL → Domain Admin attack path was identified.
 
-## Remediation
+### Remediation
    1.Reviewed MYSQL group membership.
    2.Removed excessive group memberships.
    3.Validated final LDAP membership.
    4.Reassessed the account's privileges.
 
-## Remaining Recommendation
+### Remaining Recommendation
 
 The exposed service-account credential had not been rotated during the final assessment.
 
@@ -135,7 +135,7 @@ Recommended follow-up:
 
 ### 🔐 AP-03 — AS-REP Roasting & Delegation
 
-# Informational / Low
+### Informational / Low
 
 An account configured without Kerberos preauthentication was identified as susceptible to AS-REP Roasting.
 
@@ -143,7 +143,8 @@ AS-REP authentication material was obtained for controlled offline analysis.
 
 The available password list was exhausted without recovering the credential.
 
-# Privilege Assessment
+### Privilege Assessment
+
 ```text
 ASREP
   │
@@ -152,7 +153,7 @@ ASREP
 ```
 No demonstrated ASREP → Domain Admin attack path was identified.
 
-## Delegation Assessment
+### Delegation Assessment
 
 Delegation configurations were also reviewed.
 
@@ -165,7 +166,7 @@ An existing ATTACKBOX → CLIENT RBCD relationship was also observed and was ass
 
 ### 🧠 Skills Demonstrated
 
- # Active Directory Security
+ ### Active Directory Security
    - Active Directory reconnaissance
    - LDAP enumeration
    - SMB enumeration
@@ -178,7 +179,7 @@ An existing ATTACKBOX → CLIENT RBCD relationship was also observed and was ass
    - Kerberos security assessment
    - Attack-path analysis
  
- # Attack Techniques
+ ### Attack Techniques
    - Resource-Based Constrained Delegation
    - Kerberoasting
    - AS-REP Roasting
@@ -188,7 +189,7 @@ An existing ATTACKBOX → CLIENT RBCD relationship was also observed and was ass
    - Privilege relationship analysis
    - Lateral movement assessment
 
- # Defensive & Assessment Skills
+ ### Defensive & Assessment Skills
    - Evidence collection
    - Security finding documentation 
    - Risk/impact analysis
@@ -200,6 +201,7 @@ An existing ATTACKBOX → CLIENT RBCD relationship was also observed and was ass
 
 
 ### 🛠️ Tools & Technologies
+
 | Category                       | Tools                            |
 | ------------------------------ | -------------------------------- |
 | Operating System               | Kali Linux                       |
@@ -212,7 +214,9 @@ An existing ATTACKBOX → CLIENT RBCD relationship was also observed and was ass
 | File / Authentication Services | SMB                              |
 | Target Environment             | Windows Server 2022 / Windows 10 |
 
+
 # Primary Impacket Components
+ 
   ```text
   dacledit
   rbcd
@@ -242,15 +246,18 @@ An existing ATTACKBOX → CLIENT RBCD relationship was also observed and was ass
              └─────────────┘                 └─────────────┘
 
 
-## Environment Details
+Environment Details
+
 Domain:   AD.lab
 Network:  192.168.88.0/24
 DC01:     192.168.88.10
 CLIENT:   192.168.88.136
 
 ```
+
 ### 🔬 Assessment Methodology
 The assessment followed an evidence-driven workflow:
+ 
  ```text
    01  Reconnaissance
            ↓
@@ -269,7 +276,8 @@ The assessment followed an evidence-driven workflow:
    08  Final Validation
 
  ```
-## Assessment Principles
+
+### Assessment Principles
 
 A theoretical relationship was not automatically treated as a successful compromise.
 
@@ -287,7 +295,7 @@ This keeps the assessment aligned with the evidence actually obtained during tes
 
 ### 📊 Final Validation
 
-# AP-01
+### AP-01
 Before
 ```text
     USER1 → CLIENT
@@ -302,7 +310,7 @@ No Path
 
 ✅ Remediation validated
 
-# AP-02
+### AP-02
 Credential Exposure
 ```text
 MYSQL
@@ -324,7 +332,7 @@ No Path
 
 Credential rotation remains recommended.
 
-# AP-03
+### AP-03
 AS-REP Assessment
 
 ```text
