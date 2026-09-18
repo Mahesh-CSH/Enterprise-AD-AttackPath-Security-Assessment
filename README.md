@@ -82,11 +82,12 @@ Removed temporary assessment computer account.
 Removed temporary RBCD configuration.
 Revalidated Active Directory permissions.
 Performed fresh BloodHound collection.
+
 # Retest
 
 The original USER1 → CLIENT attack path was no longer identified after remediation.
 
-# Result: ✅ PASS — Remediated and Validated
+Result: ✅ PASS — Remediated and Validated
 
 ### 🔑 AP-02 — Kerberoastable Service Account
 # Medium
@@ -110,13 +111,13 @@ MYSQL
 ```
 No demonstrated MYSQL → Domain Admin attack path was identified.
 
-### Remediation
+## Remediation
    1.Reviewed MYSQL group membership.
    2.Removed excessive group memberships.
    3.Validated final LDAP membership.
    4.Reassessed the account's privileges.
 
-### Remaining Recommendation
+## Remaining Recommendation
 
 The exposed service-account credential had not been rotated during the final assessment.
 
@@ -129,7 +130,7 @@ Recommended follow-up:
   5.Review SPN necessity.
   6.Maintain least privilege.
 
-## Result: 🟡 PARTIAL PASS — Privilege exposure reduced; credential rotation recommended
+ Result: 🟡 PARTIAL PASS — Privilege exposure reduced; credential rotation recommended
 
 
 ### 🔐 AP-03 — AS-REP Roasting & Delegation
@@ -159,7 +160,7 @@ DC01 was identified with unconstrained delegation. Because DC01 is the domain co
 
 An existing ATTACKBOX → CLIENT RBCD relationship was also observed and was assessed as part of AP-01.
 
-# Result: ✅ Assessment completed — No demonstrated privilege-compromise path
+ Result: ✅ Assessment completed — No demonstrated privilege-compromise path
 
 
 ### 🧠 Skills Demonstrated
