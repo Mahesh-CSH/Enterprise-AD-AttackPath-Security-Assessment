@@ -45,6 +45,7 @@ Final Validation
 
 ### 🏆 Key Assessment Results
 
+
 | ID       | Assessment                                   | Severity            | Final Status             |
 | -------- | -------------------------------------------- | ------------------- | ------------------------ |
 | 🔴 AP-01 | Excessive ACL Permissions + RBCD Attack Path | High                | ✅ Remediated & Validated |
@@ -52,7 +53,9 @@ Final Validation
 | 🟡 AP-03 | AS-REP Roasting & Delegation Assessment      | Informational / Low | ✅ Assessed               |
 
 
-##🔥 AP-01 — Excessive ACL Permissions + RBCD
+
+## 🔥 AP-01 — Excessive ACL Permissions + RBCD
+
 **Severity:** High
 
 A low-privileged domain user was identified with excessive control over the CLIENT computer object.
@@ -90,9 +93,11 @@ The original USER1 → CLIENT attack path was no longer identified after remedia
 Result: ✅ PASS — Remediated and Validated
 
 ### 🔑 AP-02 — Kerberoastable Service Account
+
 **Severity:** Medium
 
 The MYSQL service account was identified with a registered Service Principal Name (SPN):
+
 ```text
      DC01/mysql.AD.lab:60500
 ```
@@ -135,7 +140,7 @@ Recommended follow-up:
 
 ### 🔐 AP-03 — AS-REP Roasting & Delegation
 
-### Informational / Low
+**Severity:** Informational / Low
 
 An account configured without Kerberos preauthentication was identified as susceptible to AS-REP Roasting.
 
